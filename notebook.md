@@ -5,7 +5,8 @@
 
 # Week Fri 08/31/18 - 09/06/18
 * Finish development tools section
-* Verify ssh ability to futuresystems.org by logging into india. (Met with a message that india was retired?).
+* Create [futuresystems](https://futuresystems.org) and [chameleoncloud](https://chameleoncloud.org).
+* Verify ssh ability to futuresystems by logging into india. (Met with a message that india was retired?).
 * Reset python environments to latest versions. Removed anaconda distros.
 * Read through Python section of book.
 
