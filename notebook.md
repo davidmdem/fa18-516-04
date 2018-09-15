@@ -12,3 +12,7 @@
 
 # Week Fri 09/07/18 - 09/13/18
 * Research Google cloud offerings.
+* Went deeper into vagrant by doing excerscises and the getting started guide
+* Forked cloudmesh-community/cm
+
+# Week Fri 09/14/18 - 09/20/18
