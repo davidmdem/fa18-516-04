@@ -1,0 +1,8 @@
+---
+cloudfile:
+  name: '1MB.dat'
+  owner: 'test-owner'
+  size: 1024
+  policies: [
+    'any'
+  ]
