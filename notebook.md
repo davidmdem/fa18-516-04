@@ -16,3 +16,9 @@
 * Forked cloudmesh-community/cm
 
 # Week Fri 09/14/18 - 09/20/18
+* Got working and documented steps for building the e-book in a WSL environment.
+* Proposed a section on setting up WSL environment in spreadsheet
+* Proposed a section idea on VS Code
+* Started an experiment project dealing with the multi-cloud drive.
+
+# Week Fri 09/21/18 - 09/2718
