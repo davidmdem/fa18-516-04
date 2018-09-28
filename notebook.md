@@ -22,3 +22,7 @@
 * Started an experiment project dealing with the multi-cloud drive.
 
 # Week Fri 09/21/18 - 09/2718
+* Got the multi cloud drive working and PR'd into the main cm repository.
+* Explored potential for contributing to cm-burn code, but pulled back a bit when I saw that
+it had been spoken for.
+* Updated readme and added stubs for project files
