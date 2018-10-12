@@ -5,14 +5,14 @@ owner:
   hid: "fa18-516-04"
   community: "e516"
 section:
-  title: "Visual Studio Code"
-  url: "https://github.com/cloudmesh-community/fa18-516-04/blob/master/section/vs-code.md"
+  - title: "Visual Studio Code"
+    url: "https://github.com/cloudmesh-community/fa18-516-04/blob/master/section/vs-code.md"
 chapter:
-  title: TBD
-  url: "https://github.com/cloudmesh-community/fa18-516-04/blob/master/chapter/whatever.md"
+  - title: TBD
+    url: "https://github.com/cloudmesh-community/fa18-516-04/blob/master/chapter/whatever.md"
 project:
-  title: TBD
-  url: "https://github.com/cloudmesh-community/fa18-516-04/tree/master/project-paper"
+  - title: TBD
+    url: "https://github.com/cloudmesh-community/fa18-516-04/tree/master/project-paper"
 other:
-  title: "Add data service code to cm"
-  url: "https://github.com/cloudmesh-community/cm/tree/master/cm4/data"
+  - title: "Add data service code to cm"
+    url: "https://github.com/cloudmesh-community/cm/tree/master/cm4/data"
