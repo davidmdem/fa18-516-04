@@ -7,9 +7,9 @@ owner:
 section:
   - title: "Visual Studio Code"
     url: "https://github.com/cloudmesh-community/fa18-516-04/blob/master/section/vs-code.md"
-chapter:
+paper:
   - title: TBD
-    url: "https://github.com/cloudmesh-community/fa18-516-04/blob/master/chapter/whatever.md"
+    url: TBD
 project:
   - title: TBD
     url: "https://github.com/cloudmesh-community/fa18-516-04/tree/master/project-paper"
