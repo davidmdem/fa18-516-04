@@ -4,6 +4,7 @@ owner:
   lastname: "Demeulenaere"
   hid: "fa18-516-04"
   community: "e516"
+  semester: fa18
 section:
   - title: "Visual Studio Code"
     url: "https://github.com/cloudmesh-community/fa18-516-04/blob/master/section/vs-code.md"
