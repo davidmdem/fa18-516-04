@@ -21,8 +21,15 @@
 * Proposed a section idea on VS Code
 * Started an experiment project dealing with the multi-cloud drive.
 
-# Week Fri 09/21/18 - 09/2718
+# Week Fri 09/21/18 - 09/27/18
 * Got the multi cloud drive working and PR'd into the main cm repository.
 * Explored potential for contributing to cm-burn code, but pulled back a bit when I saw that
 it had been spoken for.
 * Updated readme and added stubs for project files
+
+# Month 09/28/18 - 11/01/18
+* Created azure VM management class for cm project. The azure vm piece is able to use Azure's 
+resource management API to create machines, the virtual network in which they reside, and execute
+commands on them.
+* Contributed to conversations regardin cm-burn project.
+* Integrated cm-data project with other cm updates
