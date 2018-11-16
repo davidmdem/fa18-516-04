@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloudmesh 4</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <style type="text/css">
+        [v-cloak] {
+            display: none
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app" class="h-100" v-cloak>
+
+        <notifications position="top center"></notifications>
+
+        <header>
+            <b-navbar type="dark" variant="primary" class="pl-1">
+                <b-navbar-brand>
+                    <b-btn v-b-toggle.leftnav variant="primary" size="">
+                        <!--<font-awesome-icon icon="bars" />-->
+                    </b-btn>
+                    Cloudmesh 4
+                </b-navbar-brand>
+            </b-navbar>
+        </header>
+
+        <main class="d-flex h-100">
+            <b-collapse id="leftnav" visible class="flex-shrink-1 align-self-stretch no-animation">
+                <b-nav class="h-100" vertical>
+                    <!--<left-nav :menu="@Model.GetLeftNav().ToJson()"></left-nav>-->
+                </b-nav>
+            </b-collapse>
+
+            <b-container fluid class="p-4 align-self-start">
+                <Index></Index>
+            </b-container>
+        </main>
+
+    </div>
+
+    <script src="dist/vendor.js" defer asp-append-version="true"></script>
+    <script src="dist/main.js" defer asp-append-version="true"></script>
+</body>
+</html>

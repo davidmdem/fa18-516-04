@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using cm.ui.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 
@@ -13,25 +11,29 @@ namespace cm.ui.Controllers
     [ApiController]
     public class VmController : ControllerBase
     {
-        private int _vmCount = 0;
+        private int _vmCount;
         private readonly IMemoryCache _cache;
-        private static Random rnd = new Random();
-        private string[] statuses = new[] {"stopped", "running", "paused"};
+        private static readonly Random rnd = new Random();
+        private readonly string[] statuses = { "stopped", "running", "paused" };
 
 
         public VmController(IMemoryCache memoryCache)
         {
             _cache = memoryCache;
 
-            if (!_cache.TryGetValue("vms", out List<Vm> vmList))
+            if (_cache.TryGetValue("vms", out List<Vm> vmList))
             {
-                vmList = new List<Vm>();
-                for (var i = 0; i < 4000; i++)
-                {
-                    vmList.Add(getRandomVm());
-                }
-                _cache.Set("vms", vmList);
+                return;
             }
+
+            vmList = new List<Vm>();
+
+            for (var i = 0; i < 4000; i++)
+            {
+                vmList.Add(getRandomVm());
+            }
+
+            _cache.Set("vms", vmList);
         }
 
         // GET: api/Vm
@@ -69,11 +71,11 @@ namespace cm.ui.Controllers
         private Vm getRandomVm()
         {
             _vmCount++;
-            
+
             return new Vm
             {
                 name = $"vm-{_vmCount}",
-                status = statuses.OrderBy(s=>rnd.NextDouble()).First()
+                status = statuses.OrderBy(s => rnd.NextDouble()).First()
             };
         }
     }
