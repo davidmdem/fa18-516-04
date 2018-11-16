@@ -1,6 +1,6 @@
 $pyEnvPath = if ($env:PYENV_PATH -eq $null) { "c:\pythons" } else { $env:PYENV_PATH }
 
-function Add-PyEnv {
+function PyEnv-Add {
   param($envName)
   $envPath = "$pyEnvPath\$envName"
   Write-Host "Creating $envName in $pyEnvPath"
@@ -9,25 +9,24 @@ function Add-PyEnv {
   Write-Host "Done"
 }
 
-function Set-PyEnv {
+function PyEnv-Get {
+  Get-ChildItem $pyEnvPath -Directory | Select-Object -ExpandProperty Name 
+}
+
+function PyEnv-Set {
   param($envName)
   . $pyEnvPath\$envName\Scripts\Activate.ps1 
 }
 
-function Remove-PyEnv {
+function PyEnv-Remove {
   param($envName)
   Remove-Item "$pyEnvPath\$envName" -Recurse -Force
 }
 
-function Clear-PyEnv {
+function PyEnv-Clear {
   deactivate
 }
 
-function Get-PyEnv {
-  Get-ChildItem $pyEnvPath -Directory | Select-Object -ExpandProperty Name 
-}
-
-
-# function Select-PyEnv {
+# function PyEnv-Select {
 #   # Todo: Menu choice
 # }

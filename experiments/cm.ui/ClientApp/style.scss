@@ -1,0 +1,32 @@
+﻿/** Override Bootstrap theme defaults.
+    https://getbootstrap.com/docs/4.0/getting-started/theming/
+*/
+$theme-colors: ( "primary": #900 );
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+/** End theme overriding. Theme SASS variables and functions are availabe through the rest of this file. */
+
+html, body {
+    height: 100%;
+    color: #333;
+    font-size: .95rem;
+}
+
+/** I'm having trouble getting horizontal/width based collapse animations.  
+    This class lets collapse items disapear immediately instead of forcing a
+    slide up/down animation.  Used on the navigation drawer.
+*/
+.no-animation {
+    transition-duration: .01s;
+}
+
+/** Top bar, not left side nav */
+.navbar {
+    height: 55px;
+}
+
+/** Top level content container */
+main > .container-fluid {
+    display: grid
+}

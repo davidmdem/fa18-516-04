@@ -14,7 +14,8 @@ namespace cm.ui.Controllers
         private int _vmCount;
         private readonly IMemoryCache _cache;
         private static readonly Random rnd = new Random();
-        private readonly string[] statuses = { "stopped", "running", "paused" };
+        private readonly string[] statuses = { "stopped", "running", "paused", "error" };
+        private readonly string[] providers = { "aws", "azure", "openstack" };
 
 
         public VmController(IMemoryCache memoryCache)
@@ -38,16 +39,13 @@ namespace cm.ui.Controllers
 
         // GET: api/Vm
         [HttpGet]
-        public IEnumerable<Vm> Get()
+        public IEnumerable<Vm> Get(string cloud = null)
         {
-            return _cache.Get<List<Vm>>("vms");
-        }
+            var vms = _cache.Get<List<Vm>>("vms");
 
-        // GET: api/Vm/5
-        [HttpGet("{id}", Name = "Get")]
-        public Vm Get(int id)
-        {
-            return getRandomVm();
+            return string.IsNullOrEmpty(cloud)
+                ? vms
+                : vms.Where(vm => vm.provider == cloud);
         }
 
         // POST: api/Vm
@@ -75,7 +73,8 @@ namespace cm.ui.Controllers
             return new Vm
             {
                 name = $"vm-{_vmCount}",
-                status = statuses.OrderBy(s => rnd.NextDouble()).First()
+                status = statuses.OrderBy(s => rnd.NextDouble()).First(),
+                provider = providers.OrderBy(p => rnd.NextDouble()).First()
             };
         }
     }
