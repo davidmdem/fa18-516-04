@@ -23,7 +23,7 @@ module.exports = (env) => {
         },
 
         entry: {
-            'main': './ClientApp/App.js'
+            'main': './ClientApp/main.js'
         },
 
         optimization: {
@@ -40,8 +40,8 @@ module.exports = (env) => {
 
         module: {
             rules: [
-                { test: /\.vue$/, include: /Pages/, use: 'vue-loader' },
-                { test: /\.js/, include: /Pages/, use: 'babel-loader' },
+                { test: /\.vue$/, use: 'vue-loader' },
+                { test: /\.js/, use: 'babel-loader' },
                 { test: /\.css$/, use: ['style-loader', 'css-loader'] },
                 { test: /\.scss$/, use: ['vue-style-loader', 'css-loader', 'sass-loader'] },
                 { test: /\.(png|jpg|jpeg|gif|svg|woff|ttf)$/, use: 'url-loader?limit=25000' },

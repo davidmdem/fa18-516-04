@@ -53,7 +53,7 @@ namespace cm.ui
                 app.UseHsts();
             }
 
-            app.UseStaticFiles();
+            app.UseFileServer();
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
